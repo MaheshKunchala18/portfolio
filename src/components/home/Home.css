@@ -1,0 +1,57 @@
+.home-section {
+    background: black;
+    height: 100vh;
+    width: 100%;
+    padding-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-content {
+    text-align: left;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #aacfc5;
+}
+
+.text-content h2 {
+    font-size: 3rem;
+    color: #aacfc5;
+}
+
+.text-content h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #aacfc5;
+}
+
+.text-content .highlight {
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+.hire-me-btn {
+    background-color: #00bcd4;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.hire-me-btn:hover {
+    background-color: #008c9e;
+}
+
+.image-content {
+    text-align: center;
+}
+
+.image-content .developer-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
