@@ -2,6 +2,7 @@
     background: linear-gradient(135deg, #1e293b, #0f172a);
     color: #f8fafc;
     height: 100vh;
+    overflow: hidden;
 }
 
 .about-section h2 {
@@ -14,12 +15,14 @@
 }
 
 .about-text {
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
 }
 
 .about-text p {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem;*/
+    font-size: clamp(0.5rem, 3.6vw, 1.2rem);
+    /* (min, preferred, max) */
     line-height: 1.8;
     color: #cbd5e1;
     text-align: justify;
