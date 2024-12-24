@@ -30,11 +30,11 @@ const Navigationbar = () => {
                         <Nav.Link href="#about" onClick={() => setExpanded(false)}>
                             About
                         </Nav.Link>
-                        <Nav.Link href="#projects" onClick={() => setExpanded(false)}>
-                            Projects
-                        </Nav.Link>
                         <Nav.Link href="#skills" onClick={() => setExpanded(false)}>
                             Skills
+                        </Nav.Link>
+                        <Nav.Link href="#projects" onClick={() => setExpanded(false)}>
+                            Projects
                         </Nav.Link>
                         <Nav.Link href="#coding-profile" onClick={() => setExpanded(false)}>
                             Coding Profile
