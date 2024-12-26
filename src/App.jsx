@@ -3,8 +3,9 @@ import Navigationbar from './components/navbar/Navigationbar';
 import Home from './components/home/Home';
 import About from './components/about/About';
 import ParticleAnimation from './animations/ParticleAnimation';
-import './App.css';
 import Skills from './components/skills/Skills';
+import Projects from './components/projects/Projects';
+import './App.css';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       </ParticleAnimation>
       <About />
       <Skills />
+      <Projects />
     </div>
   );
 }
