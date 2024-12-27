@@ -5,6 +5,7 @@ import About from './components/about/About';
 import ParticleAnimation from './animations/ParticleAnimation';
 import Skills from './components/skills/Skills';
 import Projects from './components/projects/Projects';
+import CodingProfile from './components/coding_profile/CodingProfile';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <CodingProfile />
     </div>
   );
 }
