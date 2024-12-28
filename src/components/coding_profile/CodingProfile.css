@@ -16,22 +16,51 @@
 .card-wrapper {
     margin-left: 2rem;
     margin-right: 2rem;
+    scale: 0.9;
+    perspective: 1000px; /* Enable 3D space */
+}
+
+.card-wrapper:hover {
+    box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.3);
 }
 
 .coding-card {
-    border-radius: 15px !important;
+    border-radius: 15px;
     overflow: hidden;
-    background: #1e293b !important;
+    background: #1e293b;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
 }
+
 
 .coding-card:hover {
     box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.4);
 }
 
+
+/* Back Side of Card */
+.back-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    min-height: 20rem;
+
+}
+
+.back-content h5 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+
 .markdown-content {
-    scale: 1.01;   /* To remove the white borders of codeforces*/
+    scale: 1.01;   /* To remove the white borders of codeforces */
 }
 
 .markdown-content p {

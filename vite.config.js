@@ -6,5 +6,9 @@ export default defineConfig({
   plugins: [react()],
   server: {
     open: true, // Automatically opens the browser
+    hmr: true,
+    watch: {
+      include: ['src/**/*', '**/*.json', '**/*.env'],
+    },
   },
 });
