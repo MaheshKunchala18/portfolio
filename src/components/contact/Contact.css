@@ -1,0 +1,107 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+    color: #fff;
+    text-align: center;
+}
+
+.contact-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #00c6ff, #509bf8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+}
+
+.contact-container p {
+    font-size: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.social-icon {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.linkedin {
+    font-size: 40px;
+    color: #fff;
+    transition: color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.linkedin:hover {
+    scale: 1.1;
+    color: #0077B5;
+    box-shadow: 0 4px 12px rgba(0, 119, 181, 0.6);
+}
+
+
+.github {
+    font-size: 40px;
+    color: #fff;
+    transition: color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.github:hover {
+    scale: 1.1;
+    color: #bb84f6cb;
+    box-shadow: 0 4px 12px rgba(168, 69, 214, 0.614);
+}
+
+
+.email {
+    font-size: 40px;
+    color: #fff;
+    transition: color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.email:hover {
+    scale: 1.1;
+    color: #D44638;
+    box-shadow: 0 4px 12px rgba(212, 70, 56, 0.6);
+}
+
+
+.contact-footer {
+    margin-top: 2rem;
+    font-family: "Roboto", sans-serif;
+    color: #bbb;
+}
+
+.contact-footer p {
+    font-size: 1rem;
+}
+
+.contact-footer strong {
+    color: #00c6ff;
+}
+
+@media (max-width: 768px) {
+    .contact-heading {
+        font-size: 2rem;
+    }
+
+    .social-links {
+        gap: 1.5rem;
+    }
+
+    .social-icon {
+        font-size: 1.8rem;
+    }
+}

@@ -147,7 +147,7 @@ const CodingProfile = () => {
         };
     }, []);
 
-    const leetcodeCard = `![](https://leetcard.jacoblin.cool/maheshkunchala18?theme=dark&ext=heatmap)`;
+    const leetcodeCard = `![](https://leetcard.jacoblin.cool/maheshkunchala18?theme=dark&ext=heatmap&cache=0)`;
     const gfgCard = `![GeeksForGeeks stats](https://gfgstatscard.vercel.app/mahesh18_k)`;
     const codeforcesCard = `![](https://codeforces-readme-stats.vercel.app/api/card?username=Mahesh18&theme=github_dark&disable_animations=false&show_icons=true&force_username=true)`;
     const codechefCard = `![](https://coding-profile.vercel.app/api/check?username=gkey_mahesh&theme=Dark)`;
