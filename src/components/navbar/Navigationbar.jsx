@@ -4,8 +4,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import './Navigationbar.css';
 
-const Navigationbar = () => {
+const Navigationbar = ({ activeSection }) => {
     const [expanded, setExpanded] = useState(false);
+
+    const navLinks = [
+        { id: 'home', label: 'Home' },
+        { id: 'about', label: 'About' },
+        { id: 'skills', label: 'Skills' },
+        { id: 'projects', label: 'Projects' },
+        { id: 'coding-profile', label: 'Coding Profile' },
+        { id: 'contact', label: 'Contact' }
+    ];
 
     return (
         <Navbar expand="lg" fixed="top" expanded={expanded}>
@@ -24,24 +33,16 @@ const Navigationbar = () => {
 
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto text-center">
-                        <Nav.Link href="#home" onClick={() => setExpanded(false)}>
-                            Home
-                        </Nav.Link>
-                        <Nav.Link href="#about" onClick={() => setExpanded(false)}>
-                            About
-                        </Nav.Link>
-                        <Nav.Link href="#skills" onClick={() => setExpanded(false)}>
-                            Skills
-                        </Nav.Link>
-                        <Nav.Link href="#projects" onClick={() => setExpanded(false)}>
-                            Projects
-                        </Nav.Link>
-                        <Nav.Link href="#coding-profile" onClick={() => setExpanded(false)}>
-                            Coding Profile
-                        </Nav.Link>
-                        <Nav.Link href="#contact" onClick={() => setExpanded(false)}>
-                            Contact
-                        </Nav.Link>
+                        {navLinks.map((link) => (
+                            <Nav.Link
+                                key={link.id}
+                                href={`#${link.id}`}
+                                onClick={() => setExpanded(false)}
+                                className={activeSection === link.id ? 'active-link' : ''}
+                            >
+                                {link.label}
+                            </Nav.Link>
+                        ))}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -1,14 +1,13 @@
 .coding-profile-section {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    /* background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
     padding: 80px 20px;
     text-align: center;
     overflow: hidden;
 }
 
 .section-title {
-    font-size: 1.8rem;
-    font-weight: 700;
     color: #38bdf8;
+    font-weight: bold;
     text-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
     margin-bottom: 50px;
 }

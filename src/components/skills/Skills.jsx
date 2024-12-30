@@ -40,8 +40,8 @@ const skills = [
 
 const Skills = () => {
     return (
-        <section className="skills-section py-5" id="skills">
-            <Container fluid>
+        <div className="skills-section py-5">
+            <Container>
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -52,7 +52,7 @@ const Skills = () => {
                         visible: { opacity: 1, y: 0, scale: 1 },
                     }}
                 >
-                    <h2 className="text-center mt-2 mb-5">My Technical Skills</h2>
+                    <h2 className="text-center mt-2 mb-5 fs-2">My Technical Skills</h2>
                     <Row className="justify-content-center">
                         {skills.map((skill, index) => (
                             <Col
@@ -88,7 +88,7 @@ const Skills = () => {
                     </Row>
                 </motion.div>
             </Container>
-        </section>
+        </div>
     );
 };
 

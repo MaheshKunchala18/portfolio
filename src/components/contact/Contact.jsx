@@ -4,7 +4,7 @@ import "./Contact.css";
 
 const Contact = () => {
     return (
-        <section id="contact" className="contact-container">
+        <div className="contact-container">
             {/* Contact Header */}
             <div className="contact-heading">
                 <h2>Get in Touch</h2>
@@ -46,7 +46,7 @@ const Contact = () => {
                     © {new Date().getFullYear()} Made by <strong>Mahesh Kunchala</strong>
                 </p>
             </footer>
-        </section>
+        </div>
     );
 };
 

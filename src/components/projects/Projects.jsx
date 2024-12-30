@@ -37,7 +37,7 @@ const projects = [
 
 const Projects = () => {
     return (
-        <section className="projects-container" id="projects">
+        <div className="projects-container">
             <Container fluid>
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -45,10 +45,10 @@ const Projects = () => {
                     transition={{ duration: 0.8 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-center mt-2 mb-5">My Projects</h2>
-                    <Row className="justify-content-center">
+                    <h2 className="fs-2 text-center mt-2 mb-4">My Projects</h2>
+                    <Row className="justify-content-center align-items-center">
                         {projects.map((project) => (
-                            <Col md={5} lg={3} className="mt-5 mx-2 mb-4" key={project.id}>
+                            <Col xs={10} sm={8} md={5} lg={3} className="mx-4 my-5" key={project.id}>
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
@@ -93,7 +93,7 @@ const Projects = () => {
                     </Row>
                 </motion.div>
             </Container>
-        </section>
+        </div>
     );
 };
 

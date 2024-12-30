@@ -1,11 +1,11 @@
 import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { ReactTyped } from 'react-typed';
 import './Home.css';
 
 const Home = () => {
     return (
-        <section id="home" className="home-section">
+        <div className="home-section">
             <Container>
                 <Row className="align-items-center">
                     <Col sm={12} md={12} lg={6} className="text-content">
@@ -40,7 +40,7 @@ const Home = () => {
                     </Col>
                 </Row>
             </Container>
-        </section>
+        </div>
     );
 };
 

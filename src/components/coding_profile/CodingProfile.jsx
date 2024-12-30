@@ -79,31 +79,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import ReactMarkdown from 'react-markdown';
@@ -160,9 +135,9 @@ const CodingProfile = () => {
     ];
 
     return (
-        <section className="coding-profile-section" id="coding-profile">
+        <div className="coding-profile-section">
             <Container fluid>
-                <h2 className="section-title">My Coding Profile</h2>
+                <h2 className="section-title fs-2">My Coding Profile</h2>
                 <Row className="justify-content-center align-items-center">
                     {cards.map((card) => (
                         <Col md={6} lg={5} className="mx-5 my-5" key={card.id}>
@@ -192,7 +167,7 @@ const CodingProfile = () => {
                     ))}
                 </Row>
             </Container>
-        </section>
+        </div>
     );
 };
 

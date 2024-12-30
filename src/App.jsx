@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigationbar from './components/navbar/Navigationbar';
 import ParticleAnimation from './animations/ParticleAnimation';
 import Home from './components/home/Home';
@@ -10,17 +10,41 @@ import Contact from './components/contact/Contact';
 import './App.css';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section');
+    const observerOptions = {
+      root: null,
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
   return (
     <div className="App">
-      <Navigationbar />
+      <Navigationbar activeSection={activeSection} />
       <ParticleAnimation>
-        <Home />
+        <section id="home"><Home /></section>
       </ParticleAnimation>
-      <About />
-      <Skills />
-      <Projects />
-      <CodingProfile />
-      <Contact />
+      <section id="about"><About /></section>
+      <section id="skills"><Skills /></section>
+      <section id="projects"><Projects /></section>
+      <section id="coding-profile"><CodingProfile /></section>
+      <section id="contact"><Contact /></section>
     </div>
   );
 }

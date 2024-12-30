@@ -1,6 +1,7 @@
 .navbar {
     background-color: black;
     color: #fff !important;
+    backdrop-filter: blur(5px);
 }
 
 .navbar-brand {
@@ -31,4 +32,19 @@
 
 .navbar-collapse .nav-link {
     padding: 10px 0;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #38bdf8 !important;
+}
+
+.navbar .nav-link.active-link {
+    color: #38bdf8 !important;
+    border-bottom: 2px solid #38bdf8;
 }

@@ -22,7 +22,7 @@ const About = () => {
     }, []);
 
     return (
-        <section className="about-section pt-4" id="about">
+        <div className="about-section pt-4">
             <Container fluid className="m-0 pt-5">
                 <motion.div
                     initial="hidden"
@@ -34,7 +34,7 @@ const About = () => {
                         visible: { opacity: 1, y: 0 },
                     }}
                 >
-                    <h2 className="text-center mb-0 pt-5 pb-3">About Me</h2>
+                    <h2 className="text-center mb-0 pt-5 pb-3 fs-2">About Me</h2>
                     <Row className="align-items-center">
                         {!isSmallScreen && (
                             <Col
@@ -53,7 +53,7 @@ const About = () => {
                             </Col>
                         )}
 
-                        <Col lg={7} md={12} sm={12} className="my-4">
+                        <Col sm={12} lg={7} md={12} className="my-4">
                             <div className="about-text">
                                 <p>
                                     Hi, I'm <strong>Mahesh Kunchala,</strong> a B.Tech student in
@@ -85,7 +85,7 @@ const About = () => {
                     </Row>
                 </motion.div>
             </Container>
-        </section>
+        </div>
     );
 };
 
