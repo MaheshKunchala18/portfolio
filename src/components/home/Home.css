@@ -1,5 +1,5 @@
 .home-section {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding-right: 0px;
     display: flex;
@@ -12,36 +12,18 @@
 }
 
 .text-content h1 {
-    font-size: 3rem;
+    color: whitesmoke;
     font-weight: bold;
-    color: #aacfc5;
-}
-
-.text-content h2 {
-    font-size: 3rem;
-    color: #aacfc5;
 }
 
 .text-content h3 {
-    font-size: 3rem;
+    color: whitesmoke;
     margin-bottom: 20px;
-    color: #aacfc5;
 }
 
 .text-content .highlight {
-    color: #00bcd4;
+    color: #38bdf8;
     font-weight: bold;
-}
-
-.hire-me-btn {
-    background-color: #00bcd4;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-}
-
-.hire-me-btn:hover {
-    background-color: #008c9e;
 }
 
 .image-content {

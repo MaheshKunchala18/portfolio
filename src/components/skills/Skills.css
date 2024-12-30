@@ -1,39 +1,143 @@
 .skills-section {
     color: white;
     overflow: hidden;
+    padding-top: 8rem;
+    min-height: 100vh;
 }
 
 h2 {
     color: #38bdf8;
     font-weight: bold;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
 }
+
 
 .skill-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 0.5rem;
 }
 
-.skill-icon {
-    width: 80px;
-    height: 80px;
+.skill-bubble {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     border-radius: 50%;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    overflow: hidden;
 }
 
-.skill-icon:hover {
-    transform: translateY(-5px);
+
+.skill-bubble:hover {
     scale: 1.1;
+    animation: pulse 1s infinite;
 }
+
 
 .skill-name {
     margin-top: 10px;
-    font-size: 1rem;
     font-weight: 500;
     color: white;
+}
+
+
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px var(--bubble-color);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 25px var(--bubble-color);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px var(--bubble-color);
+    }
+}
+
+
+
+@media (min-width: 992px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .skill-bubble {
+        height: 5vw;
+        width: 5vw;
+    }
+
+    .skill-icon {
+        height: 3vw;
+        width: 3vw;
+    }
+
+    .skill-name {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 991px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .skill-bubble {
+        height: 8vw;
+        width: 8vw;
+    }
+
+    .skill-icon {
+        height: 5vw;
+        width: 5vw;
+    }
+
+    .skill-name {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .skill-bubble {
+        height: 10vw;
+        width: 10vw;
+    }
+
+    .skill-icon {
+        height: 6vw;
+        width: 6vw;
+    }
+
+    .skill-name {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .skill-bubble {
+        height: 10vw;
+        width: 10vw;
+    }
+
+    .skill-icon {
+        height: 6vw;
+        width: 6vw;
+    }
+
+    .skill-name {
+        font-size: 0.65rem;
+    }
 }

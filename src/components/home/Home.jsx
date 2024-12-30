@@ -9,9 +9,9 @@ const Home = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col sm={12} md={12} lg={6} className="text-content">
-                        <h1>Hello, </h1>
-                        <h2>I'm Mahesh Kunchala, </h2>
-                        <h3>
+                        <h1 className="fs-1">Hello, </h1>
+                        <h1 className="fs-1">I'm Mahesh Kunchala, </h1>
+                        <h3 className="fs-1">
                             a{' '}
                             <span className="highlight">
                                 <ReactTyped

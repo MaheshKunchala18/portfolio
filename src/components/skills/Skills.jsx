@@ -24,7 +24,7 @@ const skills = [
     { type: 'font-awesome', name: 'Node.js', color: '#68A063', icon: faNodeJs },
     { type: 'assets', name: 'Express.js', color: '#ffffff', icon: express },
     { type: 'assets', name: 'C++', color: '#004482', icon: cpp },
-    { type: 'assets', name: 'C', color: '#A8B9CC', icon: cprogramming },
+    { type: 'assets', name: 'C', color: '#3949ab', icon: cprogramming },
     { type: 'assets', name: 'Python', color: '#3776AB', icon: python },
     { type: 'assets', name: 'MySQL', color: '#4479A1', icon: mysql },
     { type: 'assets', name: 'MongoDB', color: '#47A248', icon: mongodb },
@@ -40,7 +40,7 @@ const skills = [
 
 const Skills = () => {
     return (
-        <div className="skills-section py-5">
+        <div className="skills-section">
             <Container>
                 <motion.div
                     initial="hidden"
@@ -52,33 +52,34 @@ const Skills = () => {
                         visible: { opacity: 1, y: 0, scale: 1 },
                     }}
                 >
-                    <h2 className="text-center mt-2 mb-5 fs-2">My Technical Skills</h2>
-                    <Row className="justify-content-center">
+                    <h2 className="text-center mt-2">My Technical Skills</h2>
+                    <Row className="justify-content-center mx-2">
                         {skills.map((skill, index) => (
                             <Col
                                 key={index}
-                                xs={6}
-                                sm={4}
+                                xs={3}
+                                sm={3}
                                 md={3}
                                 lg={2}
-                                className="d-flex justify-content-center mb-4"
+                                className="d-flex justify-content-center mb-2 pt-3"
                             >
                                 <div className="skill-container text-center">
                                     <motion.div
-                                        className="skill-icon"
+                                        className="skill-bubble"
                                         transition={{ type: 'spring', stiffness: 300 }}
                                         style={{
                                             backgroundColor: `${skill.color}10`,
                                             boxShadow: `0 4px 15px ${skill.color}50`,
+                                            '--bubble-color': skill.color,
                                         }}
                                     >
                                         {skill.type === 'font-awesome' ?
                                             <FontAwesomeIcon
                                                 icon={skill.icon}
-                                                size="3x"
                                                 color={skill.color}
+                                                className='skill-icon'
                                             /> :
-                                            <img src={skill.icon} alt="skillIcon" style={{ width: '50px', height: '50px' }} />
+                                            <img className='skill-icon' src={skill.icon} alt="skillIcon" />
                                         }
                                     </motion.div>
                                     <p className="skill-name mt-2">{skill.name}</p>
