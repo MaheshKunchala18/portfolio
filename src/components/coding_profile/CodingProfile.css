@@ -17,6 +17,9 @@
     margin-right: 2rem;
     scale: 0.9;
     perspective: 1000px; /* Enable 3D space */
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .card-wrapper:hover {
@@ -27,15 +30,102 @@
     border-radius: 15px;
     overflow: hidden;
     background: #1e293b;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden; /* Smooth out the animation */
+    transform-style: preserve-3d; /* Enable 3D transforms */
 }
-
 
 .coding-card:hover {
     box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.4);
 }
 
+/* Card container for overlay positioning */
+.card-container {
+    position: relative;
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+    perspective: 1000px; /* 3D space */
+    transform-style: preserve-3d; /* Enable 3D transforms */
+}
+
+.card-container:hover .coding-card {
+    transform: scale(0.95) translateZ(-50px); /* Move back in 3D space */
+    filter: brightness(0.8);
+}
+
+/* Overlay that appears on hover */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to top, rgba(37, 99, 235, 0.9), rgba(59, 130, 246, 0.8));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    border-radius: 0 0 15px 15px;
+    overflow: hidden;
+    z-index: 2;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-overlay.visible {
+    height: 100%;
+    animation: rippleEffect 0.8s ease-out;
+}
+
+@keyframes rippleEffect {
+    0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(59, 130, 246, 0);
+    }
+}
+
+.overlay-content {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.4s ease 0.1s;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-overlay.visible .overlay-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.overlay-content h5 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.overlay-content h5:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: white;
+    transition: all 0.5s ease 0.3s;
+    transform: translateX(-50%);
+}
+
+.card-overlay.visible .overlay-content h5:after {
+    width: 100%;
+}
 
 /* Back Side of Card */
 .back-card {
@@ -47,7 +137,6 @@
     text-align: center;
     padding: 20px;
     min-height: 20rem;
-
 }
 
 .back-content h5 {
@@ -56,7 +145,6 @@
     text-align: center;
     margin: 0;
 }
-
 
 .markdown-content {
     scale: 1.01;   /* To remove the white borders of codeforces */
