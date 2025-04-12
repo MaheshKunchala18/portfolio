@@ -47,7 +47,6 @@
 .linkedin:hover {
     scale: 1.1;
     color: #0077B5;
-    box-shadow: 0 4px 12px rgba(0, 119, 181, 0.6);
 }
 
 
@@ -60,7 +59,6 @@
 .github:hover {
     scale: 1.1;
     color: #bb84f6cb;
-    box-shadow: 0 4px 12px rgba(168, 69, 214, 0.614);
 }
 
 
@@ -73,7 +71,6 @@
 .email:hover {
     scale: 1.1;
     color: #D44638;
-    box-shadow: 0 4px 12px rgba(212, 70, 56, 0.6);
 }
 
 
